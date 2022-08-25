@@ -33,6 +33,7 @@ public class Main {
                     if (img.createNewFile()) {
                         FileOutputStream fos = new FileOutputStream(img);
                         fos.write(response1.getEntity().getContent().readAllBytes());
+                        fos.close();
                     }
                 }
             }
